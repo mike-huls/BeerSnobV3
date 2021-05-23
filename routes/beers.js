@@ -69,7 +69,7 @@ router.get('/', async (req, res) => {
 // Adding a new beer -> returns the beer
 router.post('/', async(req, res) => {
 
-	let { Name } = req.body;
+	let { Name, Type } = req.body;
 	let returnbeer;
 
 	try {
@@ -88,7 +88,8 @@ router.post('/', async(req, res) => {
 		// 2. if returnbeer is still null -> create new one
 		if (!returnbeer) {
 			returnbeer = await models.beer.create({
-				Name: Name
+				Name: Name,
+				Type: Type
 			});
 		}
 
