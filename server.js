@@ -1,6 +1,6 @@
 const http = require('http');
 const express = require('express');
-const cors = require('cors');
+// const cors = require('cors');
 const bodyParser = require('body-parser');
 // const models = require('./models');
 const loggingService = require('./services/loggingService')
@@ -11,7 +11,7 @@ const NAMESPACE = 'server';
 
 // Create router
 const router = express();
-router.use(cors());
+// router.use(cors());
 
 
 
